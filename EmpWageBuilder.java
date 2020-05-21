@@ -18,7 +18,10 @@ public class EmpWageBuilder {
 
 	System.out.println("Daily Wage = "+Daily_Wage);
 
-
+	//UC3 new Branch----
+	int Part_Time_hr=4;
+		Daily_Wage=(is_Present * Wage_per_hr *Part_Time_hr);
+	System.out.println("Part-Time Wage = "+Daily_Wage);
 
 
 
