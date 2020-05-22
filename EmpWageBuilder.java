@@ -22,24 +22,48 @@ public class EmpWageBuilder {
 	int Part_Time_hr=4;
 		Daily_Wage=(is_Present * Wage_per_hr *Part_Time_hr);
 	System.out.println("Part-Time Wage = "+Daily_Wage);
-
 	//UC4 new Branch----
 
 
 	int Work_Hrs_checker = (int) (Math.floor(Math.random()*10)%2+1);
 
+	int salary=0;
+	int	empHrs=0;
+	if(is_Present==1){
+
 	switch (Work_Hrs_checker) {
 		case 1:
-		 Daily_Wage=(is_Present * Wage_per_hr *Full_Day_hr);
-   System.out.println("Full-Time Wage = "+Daily_Wage);
+		empHrs=8;
 		break;
 		case 2:
-		 Daily_Wage=(is_Present * Wage_per_hr *Part_Time_hr);
-   System.out.println("Part-Time Wage = "+Daily_Wage);
+		 empHrs=4;
 		break;
+		}
+	 salary=(empHrs*Wage_per_hr);
+		System.out.println("Salary for a Day = "+salary);
 	}
+	int Total_Working_Days_Month=20;
+	int Total_Salary=0;
 
+	if(is_Present==1)
+	{
+	for (int i =1;i<=Total_Working_Days_Month;i++)
+	{
+		 switch (Work_Hrs_checker) {
+      case 1:
+       empHrs=8;
 
+      break;
+      case 2:
+       empHrs=4;
+
+      break;
+      }
+	 salary=(empHrs*Wage_per_hr);
+		Total_Salary+=salary;
+	}
+	System.out.println(" Total Salary of A month = "+Total_Salary);
+	}
 
 
 
